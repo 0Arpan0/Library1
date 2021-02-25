@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>LIBRARY</title>
+
+    </head>
+    <style>
+        body{background-image: url(https://i.imgur.com/KVbWs03.jpg);
+             background-size: cover;
+        }
+        ul{
+            
+            background-color:seashell;
+            background-size: cover;
+            padding: -5px 90% 100px 80px;
+            margin: -8px;;
+            position: relative;
+        }
+        li{
+           
+            color: seagreen;
+            margin-left: 35px;
+            margin-right: 70px;
+            padding: -20px 80% 10px 60px;
+            display: inline-block;
+            font-size: 25px;
+                    
+            background-size: 20px;
+        }
+        a{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            background-size: 10px;
+            text-decoration: none;
+        }
+        a:hover {
+            color: coral;
+        }
+        h1{background-color: seashell;
+            border-radius: 80px;
+            margin-inline-end: 570px;
+            margin-inline-start: 570px;
+            
+        }
+        .home{
+            background-size: 80px;
+            background-color:peachpuff;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 300px;
+            margin-inline-end: 300px;
+            border-radius: 10px;
+        }
+        .para1 {background-size: 80px;
+            background-color:peachpuff;
+            display: block;
+            margin-block-start: 10px;
+            margin-block-end: 50px;
+            margin-inline-start: 300px;
+            margin-inline-end: 300px;
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-clamp: 10px;
+            text-align: center;
+            
+            }
+        .side_para {
+            background-size: 80px;
+            background-color:peachpuff;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 500px;
+            margin-inline-end: 500px;
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .submit {
+            font-family: Arial, Helvetica, sans-serif
+            color: blue;
+            font-size: 19px;
+            background-color: white;
+            border-radius: 22px;
+        }
+        .submit:hover{
+            color: coral;
+        }
+        .forgot{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-right: 160px;
+            font-size: small;
+            
+        }
+        .label {
+            margin: 2.5px;
+        }
+    </style>
+    <body>
+        <center><ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+            <li><a href="login.html">LOGIN</a></li>
+        </ul></center>
+        <center><h1><b>LIBRARY</b></h1></center>
+        <!---<center><h2 class="home">HOME</h2></center><--->
+        <form action="/new_project.html" method="POST" class="para1" onsubmit="return validate()">
+        <h2>Sign In</h2>
+        <h3>Using your account</h3> 
+        <br>
+        <br>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Hint: arpan"><br>
+        <br>
+        <label for="password" class="label">Password</label>
+        <input type="password" id="password" placeholder="Hint: hello">
+        <br>
+        <a href="#" class="forgot" onclick="return forgotPassword()">Forgot Password</a><br>
+        
+        <br>
+
+        <br>
+        <br>
+        <br>
+        <input type="submit" class="submit">
+        <br>
+        <br><br>
+    </form>
+        <script type="text/javascript">
+            let Username = document.getElementById('username')
+            let Password = document.getElementById('password')
+            let User = "arpan"
+            let Passcode = "hello"
+
+        function validate()
+            { if(!Username.value || !Password.value) 
+                alert("you forgot to write the username name or password");
+
+              else if(Username.value !== User || Password.value !== Passcode) {
+                  alert("Please enter valid credentials")
+                            }
+
+            else(alert('Welcome' + ' ' + User))
+
+
+                };
+
+        function forgotPassword() {
+            alert("This option is not available")
+        }	
+
+
+        </script>
+    </body>
+</html>
